@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["SampleCloud/SampleCloud.csproj", "SampleCloud/"]
+COPY ["SampleCloud.csproj", "SampleCloud/"]
 RUN dotnet restore "SampleCloud/SampleCloud.csproj"
 COPY . .
 WORKDIR "/src/SampleCloud"
